@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from '@/assets/Logo.png'
 import Link from "./Link";
@@ -13,7 +13,7 @@ type Props = {
 	isTopOfPage: boolean
 };
 
-const Navbar = ({selectedPage, setSelectedPage, isTopOfPage}: Props) => {
+const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage}: Props) => {
 	
 	const flexBetween = 'flex items-center justify-between'
 	const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
