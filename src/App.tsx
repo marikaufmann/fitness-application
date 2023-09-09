@@ -2,6 +2,7 @@ import Navbar from '@/scenes/navbar'
 import Home from '@/scenes/home'
 import Benefits from '@/scenes/benefits'
 import OurClasses from '@/scenes/ourClasses'
+import ContactUs from '@/scenes/contactUs'
 import { useEffect, useState } from 'react'
 import { SelectedPage } from './shared/types'
 
@@ -16,11 +17,9 @@ function App() {
       if (window.scrollY === 0) {
         setIsTopOfPage(true)
         setSelectedPage(SelectedPage.Home)
-				
       }
       if (window.scrollY !== 0) {
         setIsTopOfPage(false)
-				
       }
     }
     window.addEventListener('scroll', handleScroll)
@@ -36,6 +35,7 @@ function App() {
       <Home setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
+      <ContactUs setSelectedPage={setSelectedPage} />
     </div>
   )
 }
